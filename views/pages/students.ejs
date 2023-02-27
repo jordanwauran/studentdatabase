@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chraset="UTF-8">
+        <Title>Users By ID</Title>
+        <link rel="stylesheet" href="./stylesheets/database.css">
+    </head>
+
+    <body>
+        <main>
+        
+        
+            <% students.forEach(function(r) { %> 
+            
+            <p style="font-size:22px; line-height: 28px;"><strong>Name:</strong> <%= r.fname %></p>
+            <p style="font-size:22px; line-height: 28px;"><strong>Weight:</strong> <%= r.weight %></p>
+            <p style="font-size:22px; line-height: 28px;"><strong>Height:</strong> <%= r.height %></p>
+            <p style="font-size:22px; line-height: 28px;"><strong>Hair Color:</strong> <%= r.haircolor %></p>
+            <p style="font-size:22px; line-height: 28px;"><strong>GPA:</strong> <%= r.gpa %></p>
+
+            <p><a style="line-height:35px; font-size:21px" href="/students/<%=r.id%>/edit">Edit</a> | 
+            <a style="line-height:35px; font-size:21px" href="/">Back</a>
+            </p>   
+            <br>
+
+           
+            <% }); %>
+            
+        </main>      
+    </body>
+    
+</html> 

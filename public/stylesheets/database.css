@@ -1,0 +1,48 @@
+table {
+    height:30px;
+    width:1800px;
+    border: 1px solid;
+    border-color: black;
+    text-align: center;
+}
+
+thead {
+    background-color: #8C001A;
+    color: white;
+}
+
+p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+a {
+    color: #000;
+  
+    &:visited {
+      color: #666;
+    }
+  
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+  
+.oddline{
+    background-color: #FEFEFA;
+}
+
+.evenline{
+    background-color: #FAEBD7;
+}
+
+input {
+    width:150px;
+    height:20px;
+    border-radius:3px;
+    border: 1px solid rgba(0,0,0,.2);
+    background-color: white;
+    display:inline-block;
+}

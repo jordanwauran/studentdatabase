@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chraset="UTF-8">
+        <Title>Student Database</Title>
+        <link rel="stylesheet" href="./stylesheets/database.css">
+    </head>
+
+    <body>
+        <main>
+            <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:20px; line-height: 18px;">
+            Student Database
+            </h1>
+            <table id="table" automatic_url_conversion=true>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Weight (KG)</th>
+                        <th>Height (CM)</th>
+                        <th>Hair Color</th>
+                        <th>GPA</th>
+                        <th colspan="3"></th>
+                    </tr>
+                </thead>
+                <tbody>
+             
+                    <% students.forEach(function(r) { %> 
+                    <tr class = "evenline">
+                       
+                        <td><%= r.fname %></td>
+                        <td><%= r.weight %></td>
+                        <td><%= r.height %></td>
+                        <td><%= r.haircolor %></td>
+                        <td><%= r.gpa %></td>
+                       
+                        <td><a href="/students/" onclick="location.href=this.href+<%=r.id%>;return false;">View</a></td>
+                        <td><a href="/students/<%=r.id%>/edit">Edit</a></td>
+                        <td>
+                            <form class="" action="/students/<%= r.id %>" method="post">
+                                <button name="deleteBtn" value="<%=r.id%>" type="submit" class="btn btn-danger" onclick="confirmation()">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <br>
+            <a href="/createstudent">Add New Student</a>
+            <br>
+            <br>
+            
+        </main>
+        <script>
+            function confirmation() {
+                confirm("Are You Sure?");
+            }
+
+            
+        </script>
+    </body>
+</html>

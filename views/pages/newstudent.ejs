@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chraset="UTF-8">
+        <Title>New Student</Title>
+        <link rel="stylesheet" href="./stylesheets/database.css">
+    </head>
+
+    <body>
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:18px; line-height: 18px; color:green">New Student Was Successfully Added!</h1>
+        <p style="font-size:14px; line-height: 28px;"><strong>Name:</strong> <%= results.shift() %></p>
+        <p style="font-size:14px; line-height: 28px;"><strong>Height:</strong> <%= results.shift() %></p>
+        <p style="font-size:14px; line-height: 28px;"><strong>Weight:</strong> <%= results.shift() %></p>
+        <p style="font-size:14px; line-height: 28px;"><strong>Hair Color:</strong> <%= results.shift() %></p>
+        <p style="font-size:14px; line-height: 28px;"><strong>GPA:</strong> <%= results.shift() %></p>
+        
+        <a style="line-height:28px;" href="/">Back</a>
+    </body>
+</html> 

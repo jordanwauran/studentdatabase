@@ -1,23 +1,34 @@
 {
-  "name": "node-js-sample",
-  "version": "0.0.2",
-  "description": "a sample node.js app for heroku",
-  "main": "web.js",
+  "name": "node-js-getting-started",
+  "version": "0.3.0",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "16.x"
+  },
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "dependencies": {
-    "express": "~3.3.4"
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.15.2",
+    "pg": "^8.7.3",
+    "psql": "^0.0.1"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    "url": "https://github.com/heroku/node-js-getting-started"
   },
   "keywords": [
     "node",
-    "heroku"
+    "heroku",
+    "express"
   ],
-  "author": "Mark Pundsack",
-  "license": "BSD",
-  "gitHead": "90fd58e343c29e54fc1d4e19036595500b2bdc21"
+  "license": "MIT"
 }

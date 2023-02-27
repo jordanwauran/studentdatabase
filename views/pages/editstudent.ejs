@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chraset="UTF-8">
+        <Title>New Student</Title>
+        <link rel="stylesheet" href="./stylesheets/database.css">
+    </head>
+
+    <body>
+        <main>
+        
+            <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:20px; line-height:18px; position:relative; top:5px;">Editing Student</h1>
+            <% students.forEach(function(r) { %> 
+                <form class="" action="/students/<%=r.id%>/edit" method="post">
+                    <p style="position:relative; top:11px; left:3px; font-size: small; color:grey">Name</p>
+                    <input type="text" name="fname" value="<%= r.fname %>" required> <br>
+                    <p style="position:relative; top:11px; left:3px; font-size: small; color:grey">Weight</p>
+                    <input type="number" name="weight" value="<%= r.weight %>" required min="0"> <br>
+                    <p style="position:relative; top:11px; left:3px; font-size: small; color:grey">Height</p>
+                    <input type="number" name="height" value="<%= r.height %>" required min="0"> <br>
+                    <p style="position:relative; top:11px; left:3px; font-size: small; color:grey">Hair Color</p>
+                    <input type="text" name="haircolor" value="<%= r.haircolor %>" required> <br>
+                    <p style="position:relative; top:11px; left:3px; font-size: small; color:grey">GPA</p>
+                    <input type="number" name="gpa" value="<%= r.gpa %>" required min="0" step=".01"> <br>
+                    <br>
+                    <input name="sub" type="submit" value="Update Student" style="position:relative; top:8px"></button>
+                </form>
+            <% }); %>
+            
+            <br>
+            <br>
+            <a href="/">Back</a>
+            
+        </main>    
+    </body>
+</html>
